@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>float实现无缝隙居中单栏效果</title>
+  <style>
+  
+  body {margin: 0;}
+
+.parent {
+  border: 1px solid red;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+span {
+  border: 1px solid green;
+  float: left;
+}
+
+.child {
+  display: inline-block;
+}
+
+clearfix::after {
+  content: "";
+  diaplay: block;
+  clear: both;
+}
+  
+  </style>
+  </head>
+<body>
+  <div class="parent">
+    <div class="child clearfix">
+      <span>确定</span>
+       <span>取消</span>
+    </div>
+  </div>
+</body>
+</html>
